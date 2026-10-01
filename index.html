@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>مجموعة السبيعي القابضة | SBEI Holdings</title>
+<title>مجموعة السبيعي الاستثمارية | SBEI Holdings</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Noto+Naskh+Arabic:wght@500;700&family=Playfair+Display:wght@500;700&family=Noto+Sans+Arabic:wght@400;500;600&family=Lato:wght@400&family=El+Messiri:wght@500;700&display=swap" rel="stylesheet">
@@ -63,6 +63,7 @@ h3{font-family:var(--serif);font-size:24px;margin:0 0 8px;color:var(--gold)}
 .unit.hq{background:var(--surface);padding:30px 22px;border:1px solid var(--line)}
 footer{background:var(--green);color:var(--on-green);padding:40px 0;font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.brand{display:inline-flex;flex-direction:column;align-items:center;line-height:1.2}.brand .b2{font-size:.64em;font-weight:500;margin-top:1px}
 footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-size:19px;letter-spacing:.01em;color:#C6CEDA;background:linear-gradient(100deg,#AEB8C6,#F0F3F7 45%,#C6CEDA 70%,#AEB8C6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}footer a{color:var(--silver)}
 @media(max-width:720px){header .wrap{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;row-gap:4px}nav{order:3;width:100%;justify-content:space-between;gap:6px;overflow:visible;font-size:14.5px;border-top:1px solid rgba(255,255,255,.14);padding-top:6px}html{scroll-padding-top:calc(96px + env(safe-area-inset-top,0px))}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -70,7 +71,7 @@ footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-si
 </head>
 <body>
 <header><div class="wrap">
-<a class="brand" href="#top" data-t="brand"></a>
+<a class="brand" href="#top" data-t="brandH"></a>
 <nav aria-label="Main"><a href="#about" data-t="n1"></a><a href="#presence" data-t="n2"></a><a href="#units" data-t="n3"></a><a href="#contact" data-t="n4"></a></nav>
 <button id="lang" type="button" aria-label="Switch language">English</button>
 </div></header>
@@ -92,6 +93,12 @@ footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-si
 </div>
 </div></section>
 
+<section id="how"><div class="wrap">
+<h2 data-t="howH"></h2>
+<div class="city-list" id="stepList"></div>
+<p class="lead" data-t="howP" style="margin-top:28px"></p>
+</div></section>
+
 <section id="presence"><div class="wrap">
 <h2 data-t="presH"></h2>
 <p class="lead" data-t="presP" style="margin-bottom:28px"></p>
@@ -110,64 +117,27 @@ footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-si
 </div></footer>
 
 <script>
-var T={
-ar:{brand:"مجموعة السبيعي القابضة",n1:"من نحن",n2:"التواجد",n3:"وحداتنا",n4:"تواصل",
-h1:"منظومة أعمال عائلية إقليمية، جذورها منذ عام 1924",
-heroP:"يقود المجموعة اليوم جيل جديد برؤية ابتكارية تجمع بين أصالة التأسيس وآفاق المستقبل، متبنّيةً المرونة والابتكار لتطوير حلول مستدامة تلبي تطلعات الأسواق الحديثة.",
-aboutH:"من نحن",aboutP:"مجموعة السبيعي القابضة (SBEI Holdings) منظومة أعمال عائلية إقليمية متكاملة. تنطلق من مراكزها الاستراتيجية والتشغيلية في دمشق ودبي وإسطنبول.",
-visH:"رؤيتنا",visP:"أن نكون النموذج الرائد للمجموعات العائلية العصرية في المنطقة، من خلال دمج التجارة والتجهيزات، الهندسة والتنفيذ، الحوكمة الاستثمارية، والتكنولوجيا في بيئة مرنة ومستدامة تتوارثها الأجيال.",
-misH:"رسالتنا",misP:"تمكين قطاعات الأعمال والمجتمعات عبر تقديم خدمات تجارية ومناقصات موثوقة، مقاولات إكساء وتجهيزات معمارية ملهمة، استشارات حوكمة واستثمار استراتيجية، وحلول برمجية ذكية.",
-presH:"حيث نعمل",presP:"توزيع جغرافي ذكي يستثمر المزايا التنافسية لكل مدينة.",
-unitsH:"وحداتنا الاستثمارية والتشغيلية",foot:"دمشق · دبي · إسطنبول",
-cities:[
-["دمشق","المقر الرئيسي والتشغيلي المتكامل","المقر الرئيسي للمجموعة وحاضنة التكامل لجميع الأعمال: التجارة، العمارة، الاستشارات، التقنية والاستثمارات الجديدة."],
-["دبي","المركز المعماري والتنفيذي والتجاري","مركز الإشراف والتنفيذ المعماري والإكساء، إلى جانب عمليات التجارة وتوريدات المناقصات."],
-["إسطنبول","البوابة اللوجستية والاستشارية","مركز العمليات التجارية وسلاسل الإمداد العالمية، والاستشارات المالية والحوكمة."]],
-where:"مراكز العمل: ",
-units:[
-["السبيعي للتجارة","SBEI Trading","دبي · إسطنبول · دمشق","trading","التجارة العامة، تمثيل الشركات والوكالات التجارية، تنفيذ التعهدات، دخول المناقصات المحلية والإقليمية، الاستيراد والتصدير، وتأمين التوريدات وإدارة سلاسل الإمداد."],
-["السبيعي مِعمار","SBEI Architecture","دبي · دمشق","arch","الاستشارات المعمارية، التصاميم المعمارية والديكور الفاخر، مقاولات الإكساء والتشطيبات (Fit-Out)، خدمات التجهيزات الداخلية المخصصة (Fit-In)، والإشراف الميداني وإدارة المشاريع."],
-["السبيعي للاستشارات والحوكمة","SBEI Advisory","إسطنبول · دمشق","advisory","الذراع الاستشاري المستقل لتقديم خدمات حوكمة الشركات العائلية، والاستشارات المالية والاستثمارية، ودراسات الجدوى لقطاع الأعمال (B2B)."],
-["السبيعي للحلول التقنية","SBEI Tech","دمشق","tech","الذراع الرقمي والتكنولوجي لتطوير الحلول البرمجية، وتحليل النظم، والتحول الرقمي، ودعم الكيانات التجارية بالبنية التحتية الذكية والأنظمة المؤتمتة، إضافةً إلى إدارة وتشغيل مشاريع تقنية خاصة."],
-["تطوير واستكشاف الفرص الاستثمارية","New Venture Investments","وحدة تابعة مباشرة للمجموعة القابضة","ventures","دراسة واقتناص الفرص الاستثمارية الجديدة، والدخول في شراكات استراتيجية أو الاستحواذ على حصص في مشاريع ناشئة وواعدة عبر القطاعات المختلفة."]]},
-en:{brand:"SBEI Holdings",n1:"About",n2:"Presence",n3:"Our units",n4:"Contact",
-h1:"A regional family business group, rooted in 1924",
-heroP:"Today the group is led by a new generation with an innovative vision that joins the authenticity of its founding with the horizons ahead, using agility and innovation to build sustainable solutions for modern markets.",
-aboutH:"Who we are",aboutP:"SBEI Holdings is an integrated regional family business group, operating from strategic and operational centers in Damascus, Dubai and Istanbul.",
-visH:"Vision",visP:"To be the leading model of the modern family group in the region, combining trade and supplies, engineering and execution, investment governance and technology in a flexible, sustainable environment passed down through generations.",
-misH:"Mission",misP:"To empower businesses and communities with reliable trading and tender services, inspiring fit-out and architectural contracting, strategic governance and investment advisory, and smart software solutions.",
-presH:"Where we operate",presP:"A deliberate geographic spread that draws on the competitive strengths of each city.",
-unitsH:"Our operating and investment units",foot:"Damascus · Dubai · Istanbul",
-cities:[
-["Damascus","Headquarters and integrated operations","The group's headquarters and the incubator for every business: Trading, Architecture, Advisory, Tech and New Ventures."],
-["Dubai","Architectural, execution and commercial hub","The hub for architectural supervision, execution and fit-out, alongside trading operations and tender supply."],
-["Istanbul","Logistics and advisory gateway","The hub for trade operations and global supply chains, as well as financial advisory and governance."]],
-where:"Operating centers: ",
-units:[
-["SBEI Trading","السبيعي للتجارة","Dubai · Istanbul · Damascus","trading","General trading, company and commercial agency representation, contract delivery, local and regional tenders, import and export, supply sourcing and supply chain management."],
-["SBEI Architecture","السبيعي مِعمار","Dubai · Damascus","arch","Architectural consultancy, architectural design and luxury décor, fit-out and finishing contracting, bespoke interior fit-in services, site supervision and project management."],
-["SBEI Advisory","السبيعي للاستشارات والحوكمة","Istanbul · Damascus","advisory","The independent advisory arm: family business governance, financial and investment advisory, and feasibility studies for B2B clients."],
-["SBEI Tech","السبيعي للحلول التقنية","Damascus","tech","The digital and technology arm: software development, systems analysis, digital transformation, and smart infrastructure and automated systems for businesses, plus management and operation of private technology projects."],
-["New Venture Investments","تطوير واستكشاف الفرص الاستثمارية","A unit reporting directly to SBEI Holdings","ventures","Evaluating and seizing new investment opportunities, and entering strategic partnerships or acquiring stakes in promising startups across sectors."]]}
-};
+var T={"ar": {"brand": "مجموعة السبيعي الاستثمارية", "brandH": "<span class='b1'>مجموعة السبيعي</span><span class='b2'>الاستثمارية</span>", "n1": "من نحن", "n2": "التواجد", "n3": "وحداتنا", "n4": "تواصل", "h1": "منظومة استثمارية عائلية إقليمية، جذورها التجارية منذ عام 1924", "heroP": "يقود المجموعة جيل جديد يبني على إرث تجاري عمره قرن، ويحوّل الفرص إلى استثمارات عبر الاستشارة والشراكات الاستراتيجية.", "aboutH": "من نحن", "aboutP": "مجموعة السبيعي منظومة استثمارية عائلية إقليمية، تمتد جذورها التجارية إلى عام 1924. تنطلق من دمشق ودبي وإسطنبول، وتعمل في مجالات متعددة عبر وحدات إدارية متخصصة، تصنع الفرص وتهيكل الصفقات وتشرف على تنفيذها مع شركاء استراتيجيين.", "visH": "رؤيتنا", "visP": "أن نكون النموذج الرائد للمجموعات الاستثمارية العائلية العصرية في المنطقة، بدمج خبرة التجارة العريقة بالاستشارة المتخصصة والشراكات المتينة.", "misH": "رسالتنا", "misP": "اكتشاف الفرص الواعدة في كل مجال، وتحويلها إلى مشاريع ناجحة عبر استشارة متخصصة وشراكات استراتيجية وإشراف دقيق على التنفيذ.", "howH": "كيف نعمل", "howP": "في كل مجال تعمل المجموعة مع شبكة من الشركاء الاستراتيجيين. وحيثما يتطلب المشروع التنفيذ، تتولى الوحدة المختصة دور المتعاقد أو المقاول الرئيسي أو مدير المشروع، بالشراكة مع مقاولين وموردين متخصصين ذوي خبرة عالية، وتشرف على الأعمال حتى التسليم.", "steps": [["نستشير ونهيكل", "01", "ندرس الفرصة ونصيغ الصفقة والعقود."], ["نتشارك", "02", "نعقد اتفاقيات استراتيجية مع شركاء متخصصين في كل مجال."], ["نشرف ونتابع", "03", "نتابع التنفيذ حتى تحقيق النتيجة."]], "presH": "حيث نعمل", "presP": "توزيع جغرافي ذكي يستثمر المزايا التنافسية لكل مدينة.", "unitsH": "وحداتنا", "foot": "دمشق · دبي · إسطنبول", "cities": [["دمشق", "المقر الرئيسي والتشغيلي المتكامل", "المقر الرئيسي للمجموعة وحاضنة التكامل لجميع الوحدات: التجارة، العمارة، الطاقة، الحوكمة، التقنية والفرص الاستثمارية."], ["دبي", "المركز المعماري والتنفيذي والتجاري", "مركز الإشراف والتنفيذ المعماري والإكساء، إلى جانب عمليات التجارة وتوريدات المناقصات."], ["إسطنبول", "البوابة اللوجستية والاستشارية", "مركز العمليات التجارية وسلاسل الإمداد العالمية، والاستشارات المالية والحوكمة."]], "where": "مراكز العمل: ", "units": [["وحدة التجارة وسلاسل الإمداد", "Trade & Supply Chain Unit", "دبي · إسطنبول · دمشق", "trading", "تمثيل الشركات وتأمين الطلبات والتوريدات عبر سلاسل الإمداد، كما تتولى الوحدة دور المورّد أو المتعاقد الرئيسي في العقود والمناقصات بالتعاون مع موردين ومصنّعين متخصصين، وتبني شراكات تحوّل الفرص التجارية إلى استثمارات."], ["وحدة العمارة والإكساء", "Architecture & Fit-Out Unit", "دبي · دمشق", "arch", "الاستشارات المعمارية والتصميم والديكور الفاخر، وإدارة مشاريع الإكساء والتجهيزات والإشراف الميداني عليها، بدور المقاول الرئيسي أو مدير المشروع مع شركاء تنفيذ متخصصين."], ["وحدة الهندسة الكهربائية والطاقة البديلة", "Electrical Engineering & Renewable Energy Unit", "دمشق", "energy", "دراسة المشاريع وتصميم المخططات وتقديم الحلول المناسبة، وتنفيذها عبر شركاء استراتيجيين متخصصين بإشراف الوحدة."], ["وحدة الحوكمة والاستشارات المالية", "Governance & Financial Advisory Unit", "إسطنبول · دمشق", "advisory", "حوكمة الشركات العائلية، والاستشارات المالية والاستثمارية، ودراسات الجدوى لقطاع الأعمال."], ["وحدة الحلول التقنية", "Technology Solutions Unit", "دمشق", "tech", "استشارات التحول الرقمي وتحليل النظم وتطوير الحلول البرمجية، وإدارة وتشغيل مشاريع تقنية خاصة بالشراكة مع جهات متخصصة."], ["وحدة الفرص الاستثمارية", "Investment Opportunities Unit", "تتبع المجموعة مباشرة", "ventures", "دراسة واقتناص الفرص الجديدة، والدخول في شراكات استراتيجية أو الاستحواذ على حصص في مشاريع ناشئة وواعدة."]]}, "en": {"brand": "SBEI Holdings", "brandH": "SBEI Holdings", "n1": "About", "n2": "Presence", "n3": "Our units", "n4": "Contact", "h1": "A regional family investment group, with commercial roots since 1924", "heroP": "Led today by a new generation building on a century-old trading heritage, we turn opportunities into investments through advisory and strategic partnerships.", "aboutH": "Who we are", "aboutP": "SBEI is a regional family investment group whose commercial roots reach back to 1924. Based in Damascus, Dubai and Istanbul, it works across many sectors through specialised management units that create opportunities, structure deals and oversee delivery with strategic partners.", "visH": "Vision", "visP": "To be the leading model of the modern family investment group in the region, combining a long trading heritage with specialist advisory and enduring partnerships.", "misH": "Mission", "misP": "To find promising opportunities in every field and turn them into successful projects through specialist advice, strategic partnerships and close oversight of delivery.", "howH": "How we work", "howP": "In every field, the group works with a network of strategic partners. Where a project calls for delivery, the relevant unit acts as prime or main contractor or project lead, working with specialist contractors and suppliers of proven experience, and oversees the work through to handover.", "steps": [["We advise and structure", "01", "We study the opportunity and shape the deal and its contracts."], ["We partner", "02", "We enter strategic agreements with specialist partners in each field."], ["We oversee and follow through", "03", "We follow delivery until the result is achieved."]], "presH": "Where we operate", "presP": "A deliberate geographic spread that draws on the competitive strengths of each city.", "unitsH": "Our units", "foot": "Damascus · Dubai · Istanbul", "cities": [["Damascus", "Headquarters and integrated operations", "The group's headquarters and the incubator for every unit: Trade, Architecture, Energy, Governance, Technology and Investment Opportunities."], ["Dubai", "Architectural, execution and commercial hub", "The hub for architectural supervision, execution and fit-out, alongside trading operations and tender supply."], ["Istanbul", "Logistics and advisory gateway", "The hub for trade operations and global supply chains, as well as financial advisory and governance."]], "where": "Operating centers: ", "units": [["Trade & Supply Chain Unit", "وحدة التجارة وسلاسل الإمداد", "Dubai · Istanbul · Damascus", "trading", "Representing companies and securing orders and supply through supply chains, while also acting as lead supplier or prime contractor on contracts and tenders with specialist suppliers and manufacturers, and building partnerships that turn commercial opportunities into investments."], ["Architecture & Fit-Out Unit", "وحدة العمارة والإكساء", "Dubai · Damascus", "arch", "Architectural consultancy, design and luxury décor, and management and site supervision of fit-out and furnishing projects, acting as main contractor or project lead with specialist delivery partners."], ["Electrical Engineering & Renewable Energy Unit", "وحدة الهندسة الكهربائية والطاقة البديلة", "Damascus", "energy", "Studying projects, preparing designs and drawings and proposing suitable solutions, with delivery through specialist strategic partners under the unit's supervision."], ["Governance & Financial Advisory Unit", "وحدة الحوكمة والاستشارات المالية", "Istanbul · Damascus", "advisory", "Family business governance, financial and investment advisory, and feasibility studies for the business sector."], ["Technology Solutions Unit", "وحدة الحلول التقنية", "Damascus", "tech", "Digital transformation advisory, systems analysis and software solutions development, and management and operation of private technology projects with specialist partners."], ["Investment Opportunities Unit", "وحدة الفرص الاستثمارية", "Reports directly to the group", "ventures", "Evaluating and seizing new opportunities, and entering strategic partnerships or acquiring stakes in promising startups."]]}};
 var lang="ar";
 function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
 function render(){
   var d=T[lang],ar=lang==="ar";
   document.documentElement.lang=lang;document.documentElement.dir=ar?"rtl":"ltr";
-  document.title=ar?"مجموعة السبيعي القابضة | SBEI Holdings":"SBEI Holdings | مجموعة السبيعي القابضة";
-  document.querySelectorAll("[data-t]").forEach(function(n){n[n.dataset.t==="h1"?"innerHTML":"textContent"]=d[n.dataset.t]});
+  document.title=ar?"مجموعة السبيعي الاستثمارية | SBEI Holdings":"SBEI Holdings | مجموعة السبيعي الاستثمارية";
+  document.querySelectorAll("[data-t]").forEach(function(n){n[(n.dataset.t==="h1"||n.dataset.t==="brandH")?"innerHTML":"textContent"]=d[n.dataset.t]});
   document.getElementById("lang").textContent=ar?"English":"العربية";
   var hc=document.getElementById("heroCities");hc.innerHTML="";
   d.cities.forEach(function(c){hc.appendChild(el("span",0,c[0]))});
   var cl=document.getElementById("cityList");cl.innerHTML="";
   d.cities.forEach(function(c){cl.appendChild(el("div","city","<h3>"+c[0]+"</h3><small>"+c[1]+"</small><p>"+c[2]+"</p>"))});
+  var sl=document.getElementById("stepList");sl.innerHTML="";
+  d.steps.forEach(function(c){sl.appendChild(el("div","city","<h3>"+c[0]+"</h3><small>"+c[1]+"</small><p>"+c[2]+"</p>"))});
   var ul=document.getElementById("unitList");ul.innerHTML="";
   d.units.forEach(function(u,i){
     var m=u[3]+"@sbeigroup.com";
     var x=el("article","unit");
     var second=ar?u[1]:u[1];
-    x.innerHTML="<div><h3>"+u[0]+"</h3><div class='en'>"+second+"</div><div class='where'>"+(i<4?d.where:"")+u[2]+"</div></div><div><p>"+u[4]+"</p><a class='mail' href='mailto:"+m+"'>"+m+"</a></div>";
+    x.innerHTML="<div><h3>"+u[0]+"</h3><div class='en'>"+second+"</div><div class='where'>"+(i<5?d.where:"")+u[2]+"</div></div><div><p>"+u[4]+"</p><a class='mail' href='mailto:"+m+"'>"+m+"</a></div>";
     ul.appendChild(x);
   });
   document.getElementById("footMail").innerHTML="<a href='mailto:info@sbeigroup.com'>info@sbeigroup.com</a><br><a href='https://www.sbeiholdings.com'>www.sbeiholdings.com</a>";
