@@ -22,7 +22,7 @@ a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--green);color:var(--on-green)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;padding-block:6px;gap:12px}
-.brand{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-weight:700;font-size:clamp(19px,5.6vw,24px);letter-spacing:.01em;text-decoration:none;white-space:nowrap;color:#C6CEDA;background:linear-gradient(100deg,#AEB8C6,#F0F3F7 45%,#C6CEDA 70%,#AEB8C6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-weight:700;font-size:clamp(20px,5.9vw,25.5px);letter-spacing:.01em;text-decoration:none;white-space:nowrap;color:#C6CEDA;background:linear-gradient(100deg,#AEB8C6,#F0F3F7 45%,#C6CEDA 70%,#AEB8C6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 nav{display:flex;gap:18px;font-size:15px;overflow-x:auto}
 nav a{text-decoration:none;opacity:.85;white-space:nowrap}
 nav a:hover{opacity:1;color:var(--silver)}
@@ -64,6 +64,7 @@ h3{font-family:var(--serif);font-size:24px;margin:0 0 8px;color:var(--gold)}
 footer{background:var(--green);color:var(--on-green);padding:40px 0;font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .brand{display:inline-flex;flex-direction:column;align-items:center;line-height:1.02}.brand .b2{margin-top:.35em}.brand .b0,.brand .b1,.brand .b2{font-family:"Markazi Text","El Messiri",serif}.brand .b0,.brand .b2{font-size:.72em;font-weight:500}.brand .b1{font-size:1.38em;font-weight:700}
+footer .wrap{flex-direction:column;align-items:flex-start;gap:14px}footer .nm{display:flex;flex-direction:column;align-items:flex-start;gap:4px}footer .brand{font-size:20px;flex-direction:row;align-items:baseline;column-gap:.32em;line-height:1.2}footer .brand .b0,footer .brand .b1,footer .brand .b2{font-size:1em;font-weight:700;margin:0}footer .cities{font-size:13.5px;opacity:.8}@media(min-width:721px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
 footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-size:19px;letter-spacing:.01em;color:#C6CEDA;background:linear-gradient(100deg,#AEB8C6,#F0F3F7 45%,#C6CEDA 70%,#AEB8C6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}footer a{color:var(--silver)}
 @media(max-width:720px){header .wrap{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:8px;row-gap:4px}nav{order:3;width:100%;justify-content:space-between;gap:6px;overflow:visible;font-size:14.5px;border-top:1px solid rgba(255,255,255,.14);padding-top:6px}html{scroll-padding-top:calc(124px + env(safe-area-inset-top,0px))}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -112,7 +113,7 @@ footer strong{font-family:"El Messiri","Noto Naskh Arabic",Georgia,serif;font-si
 </main>
 
 <footer id="contact"><div class="wrap">
-<div><strong data-t="brand"></strong><br><span data-t="foot"></span></div>
+<div class="nm"><span class="brand" data-t="brandH"></span><span class="cities" data-t="foot"></span></div>
 <div id="footMail" style="direction:ltr"></div>
 </div></footer>
 
